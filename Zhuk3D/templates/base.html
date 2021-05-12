@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Free 3D Models - 3D Modddels</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link rel="stylesheet" href="/static/css/mai.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+      <div class="container">
+          <a href="#" class="navbar-brad"><img src="/static/logowbg.png" height="50" width=auto></a>
+          <form class="d-flex" method="GET">
+              <input class="form-control mr-2" type="text" placeholder="Search" aria-label="Search" name="q" value="{{ request.args.get('q', '') }}">
+              <button type="submit" class="btn btn-primary  my-2 my-sm-0">Search</button>
+      </form>
+      </div>
+
+  </nav>
+
+
+
+    {% block title%}{% endblock %}
+  {% block body %}{% endblock %}
+  <footer class="blog-footer border-top">
+    <div class="container">
+        <div class="row padding my-3 ">
+            <p><div class="col-12 col-md">
+                <img class="mb-2" src="/static/Logo.png" alt width=auto height="50">
+                <small class="d-block mb-3 text-muted">© Copyright 3D Modddels 2021</small>
+                <small class="text-muted ">Complaints and suggestions: zhuk.admi@gmail.com</small>
+            </div>
+             <a href="https://www.instagram.com/aleksandr_zhukovin/"><i class="fab fa-instagram my-3 mx-3 float-right"></i></a>
+            <a href="https://twitter.com/AZhukovin"><i class="fab fa-twitter mt-3 mb-2 mx-3 float-right"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100021043006866"><i class="fab fa-facebook my-3 mx-3 float-right"></i></a>
+
+        </p>
+        </div>
+        </div>
+</footer>
+
+  </body>
+
+
+</html>

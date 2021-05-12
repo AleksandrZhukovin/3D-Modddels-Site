@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D Models - Download</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link rel="stylesheet" href="/static/css/mai.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+      <div class="container-fluid">
+          <a href="#" class="navbar-brad"><img src="/static/logowbg.png" height="50" width=auto></a>
+          <button class="navbar-toggler" type="button" data-toglle="collapse" data-target="#navbarResponsive">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <ul class="navbar-nav">
+             <li class="nav-item">
+                <a href="/" class="nav-link"><span class="material-icons md-36">home</span> Home</a>
+             </li>
+          </ul>
+      </div>
+  </nav>
+  </div>
+  </div>
+{% for el in data %}
+<center><h2 class="p-3 mb-2 bg-light text-dark">{{ el.title }}</h2></center>
+  {% if el.path_1 != '-' %}
+  <center><img class="my-4" src="/static/{{ el.title }}/{{ el.path_1 }}" width="800" height=auto></center>
+  {% endif %}
+  {% if el.path_2 != '-' %}
+  <center><img class="my-4" src="/static/{{ el.title }}/{{ el.path_2 }}" width="800" height=auto></center>
+  {% endif %}
+  {% if el.path_3 != '-' %}
+  <center><img class="my-4" src="/static/{{ el.title }}/{{ el.path_3 }}" width="800" height=auto></center>
+  {% endif %}
+  {% if el.path_4 != '-' %}
+  <center><img class="my-4" src="/static/{{ el.title }}/{{ el.path_4 }}" width="800" height=auto></center>
+  {% endif %}
+  {% if el.path_5 != '-' %}
+  <center><img class="my-4" src="/static/{{ el.title }}/{{ el.path_5 }}" width="800" height=auto></center>
+  {% endif %}
+<div class="jumbotron p-3 p-md-5 text-dark bg-light ">
+        <center><h5 class="font-weight-bold">Some information</h5></center>
+        <center><h6 class="my-4">{{ el.description }}</h6></center>
+        <h6>File type: {{ el.file_type }}</h6>
+        <h6>File size: {{ el.weight }}</h6>
+    <center><a type="button" class="btn btn-primary btn-lg my-4" href="/static/{{ el.title }}/{{ el.file }}" download>Download</a></center>
+</div>
+{% endfor %}
+ <footer class="blog-footer border-top">
+    <div class="container">
+        <div class="row padding my-3 ">
+            <p><div class="col-12 col-md">
+                <img class="mb-2" src="/static/Logo.png" alt width=auto height="50">
+                <small class="d-block mb-3 text-muted">© Copyright 3D Modddels</small>
+            <small class="text-muted ">Complaints and suggestions: zhuk.admi@gmail.com</small>
+            </div>
+             <a href="https://www.instagram.com/aleksandr_zhukovin/"><i class="fab fa-instagram my-3 mx-3 float-right"></i></a>
+            <a href="https://twitter.com/AZhukovin"><i class="fab fa-twitter my-3 mx-3 float-right"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100021043006866"><i class="fab fa-facebook my-3 mx-3 float-right"></i></a>
+        </p>
+        </div>
+        </div>
+</footer>
+</body>
